@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Курс валют</title>
+</head>
+<body>
+    <div class="cbrInfo">
+        <div class="course course_date">
+            <h1 class="title">Курс на [% date %]</h1>
+            <h3 class="titleSpan">Валюта <span class="curr">[% curr %]</span></h3>
+            <div>
+                <h3>Курс</h3>
+                <ul>
+                [% FOREACH rate = rates %]
+                    <li>[% rate %]</li>
+                [% END %]
+                </ul>
+            </div>
+        </div>
+        <div class="course course_now">
+            <h1 class="title">Курс на  сегодня [% date_now %]</h1>
+            <h3 class="titleSpan">Валюта <span class="curr">[% curr %]</span></h3>
+            <div>
+                <h3>Курс</h3>
+                <ul>
+                    <li>[% rate_now %]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<style>
+    .cbrInfo{
+        padding: 0 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .title{
+        margin: auto;
+    }
+    .titleSpan{
+        margin: 10px 0;
+    }
+    .curr{
+        color: red;
+    }
+    .course{
+
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    li{
+        color:green;
+    }
+</style>
+
+</body>
+</html>
